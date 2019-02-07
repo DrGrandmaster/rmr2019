@@ -1,23 +1,8 @@
 package frc.robot;
-
 import java.lang.Math;
+//I fixed the syntax errors, declared variables, switched to doubles, and imported math library properly
 
-public class CameraMath{
-    public CameraMath(int i, int j) {
-    }
-
-    public static void main(String[] args) {
-        CameraMath1 Camera = new CameraMath1(8, 10); //the first number is the height of the camera in inches and the second number is the error bars for the calculations. Higher = more relaxed standards.
-        int points2 [] = {-88, -619, -275, -619, -275, -750, -88, -750};
-    System.out.println(Camera.math(points2));
-    }
-
-    /*private char[] math(int[] points2) {
-        return null;
-    }*/
-}
-
-class CameraMath1 // extends Component
+class CameraMath //extends Component
 {
 
     //the amount of pixels in 1 inch
@@ -26,7 +11,7 @@ class CameraMath1 // extends Component
     double error;
 
     //constructor - one arg - height of camera off the ground
-    public CameraMath1(double in_height, int in_error){
+    public CameraMath(double in_height, int in_error) {
         //this sets inch in to the correct number
         inch = 2000 / (in_height * (5.039 / 6));
 
@@ -63,14 +48,15 @@ class CameraMath1 // extends Component
         } else {
             //throw an exception if the input is bad
             throw new IllegalArgumentException("Error in CameraMath Java.java: You wrote the code above this error thrower badly. Try fixing it until the code stops erring.");
-            
         }
 
     }
 
+    /*
     //this is for tick updates
-    /*@Override
+    @Override
     public Update(){
 
-    }*/
+    }
+*/
 }
